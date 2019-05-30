@@ -26,11 +26,16 @@ class App extends Component {
           <Switch>
             <Route
               exact path='/'
-              component={Home}
+              // component={Home}
+              render={
+                (props) =>
+                  <Home history={props.history} />
+
+              }
             />
             <Route
               path='/about'
-              component={About}
+              // component={About}
               render={
                 (props) =>
                   <About match={props.match} username={this.state.username} />
