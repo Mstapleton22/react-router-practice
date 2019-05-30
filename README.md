@@ -15,3 +15,14 @@
 
 * [React Router - Docs](https://reacttraining.com/react-router/)
 * [Programatically Navigate w/React Router](https://tylermcginnis.com/react-router-programmatically-navigate/)
+
+## Notes 
+
+* What components do we need?
+ * Route
+ * Router
+ * Switch
+ * Link
+
+* NavLink vs Link
+ * NavLink has activeClassName to style.

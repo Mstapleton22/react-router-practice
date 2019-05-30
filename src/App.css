@@ -18,6 +18,18 @@
   color: white;
 }
 
+a {
+  margin: 1rem;
+}
+
+p {
+  margin: 1rem;
+}
+
+.active-link {
+  color: salmon;
+}
+
 .App-link {
   color: #61dafb;
 }

@@ -8,16 +8,43 @@ import About from './components/About'
 import Contact from './components/Contact'
 import NotFound from './components/NotFound'
 import Navigation from './components/Navigation'
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 
 class App extends Component {
+  state = {
+    username: "Michael"
+  }
+
   render() {
     return (
       <div className="App">
-        <Navigation />
-        <Home />
-        <About />
-        <Contact />
-        <NotFound />
+        <Router>
+          <Route
+            path='/'
+            component={Navigation}
+          />
+          <Switch>
+            <Route
+              exact path='/'
+              component={Home}
+            />
+            <Route
+              path='/about'
+              component={About}
+              render={
+                (props) =>
+                  <About match={props.match} username={this.state.username} />
+              }
+            />
+            <Route
+              path='/contact'
+              component={Contact}
+            />
+            <Route
+              component={NotFound}
+            />
+          </Switch>
+        </Router>
       </div>
     );
   }
